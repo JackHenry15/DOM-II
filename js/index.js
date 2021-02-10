@@ -1,6 +1,10 @@
 // Your code goes here
 const homeNav = document.querySelectorAll('nav a')
+const logoHead = document.querySelector('.logo-heading h1')
+const funBus = document.querySelector('.intro img')
 
+
+// logoHead.addEventListener('dblclick', sizeUp)
 homeNav[0].addEventListener('click', colorChanger)
 homeNav[1].addEventListener('click', colorChanger)
 homeNav[2].addEventListener('click', colorChanger)
@@ -9,23 +13,21 @@ homeNav[0].addEventListener('mouseover', aColorChanger)
 homeNav[1].addEventListener('mouseover', aColorChanger)
 homeNav[2].addEventListener('mouseover', aColorChanger)
 homeNav[3].addEventListener('mouseover', aColorChanger)
+funBus.addEventListener('dblclick', sizeUp)
+document.addEventListener('keydown', boldText)
 
+function sizeUp(event){
+    document.documentElement.style.fontStyle = "italic";
+}
 function colorChanger(event) {
-    for (i = Math.random(0, 3); i < 5;)
-    if (i = 0){
     document.documentElement.style.backgroundColor = 'tan'
     event.stopImmediatePropogation()
-    }else if (i = 1){
-        document.documentElement.style.backgroundColor = 'brown'
-        event.stopImmediatePropogation()
-    }else if (i = 2){
-        document.documentElement.style.backgroundColor = 'yellow'
-        event.stopImmediatePropogation()
-    }else if (i = 3){
-        document.documentElement.style.backgroundColor = 'blue'
-        event.stopImmediatePropogation()
     }
-}
 function aColorChanger(event){
-    document.homeNav.style.backgroundColor = 'black'
+    document.documentElement.style.backgroundColor = 'black'
 }
+document.addEventListener("keydown", function (event){
+    if(event.key === "Escape"){
+        document.documentElement.style.fontWeight = "bold";
+    }
+});
