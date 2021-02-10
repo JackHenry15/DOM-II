@@ -2,9 +2,10 @@
 const homeNav = document.querySelectorAll('nav a')
 const logoHead = document.querySelector('.logo-heading h1')
 const funBus = document.querySelector('.intro img')
+const container = document.querySelector('div.container')
 
 
-// logoHead.addEventListener('dblclick', sizeUp)
+
 homeNav[0].addEventListener('click', colorChanger)
 homeNav[1].addEventListener('click', colorChanger)
 homeNav[2].addEventListener('click', colorChanger)
@@ -14,7 +15,7 @@ homeNav[1].addEventListener('mouseover', aColorChanger)
 homeNav[2].addEventListener('mouseover', aColorChanger)
 homeNav[3].addEventListener('mouseover', aColorChanger)
 funBus.addEventListener('dblclick', sizeUp)
-document.addEventListener('keydown', boldText)
+
 
 function sizeUp(event){
     document.documentElement.style.fontStyle = "italic";
@@ -28,6 +29,6 @@ function aColorChanger(event){
 }
 document.addEventListener("keydown", function (event){
     if(event.key === "Escape"){
-        document.documentElement.style.fontWeight = "bold";
+        container.style.backgroundColor = "red";
     }
 });
