@@ -4,9 +4,6 @@ const logoHead = document.querySelector('.logo-heading h1')
 const funBus = document.querySelector('.intro img')
 const theBoat = document.querySelector('img')
 const container = document.querySelector('div.container')
-const textFun = document.querySelector('text-content')
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
 
 
 homeNav[0].addEventListener('click', colorChanger)
@@ -39,7 +36,22 @@ document.addEventListener("keydown", function (event){
         return document.documentElement.style.backgroundColor = "red";;
     }
 });
-window.addEventListener('resize', function(event){
-    heightOutput.textContent = window.innerHeight;
-    widthOutput.textContent = window.innerWidth;
+funBus.addEventListener('mouseout', function(event){
+    document.documentElement.style.backgroundColor = "teal";
+})
+document.addEventListener('mouseleave', function(event){
+    document.documentElement.style.backgroundColor = "purple";
+})
+
+document.addEventListener('wheel', function(event){
+    theBoat.src = "https://www.amny.com/wp-content/uploads/2020/04/2020-04-08T204704Z_1_LYNXNPEG370MQ_RTROPTP_4_HEALTH-CORONAVIRUS-SESAME-STREET-753x1024.jpg";
 });
+
+container.addEventListener('mouseenter', function(event){
+        container.style.backgroundColor = 'green';
+})
+
+document.addEventListener('contextmenu', e => {
+    e.preventDefault();
+
+})
